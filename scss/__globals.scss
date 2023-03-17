@@ -1,0 +1,38 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-16);
+  background-image: url('../public/body-bg.png');
+  background-color: var(--default-black-bg);
+  overflow-x: hidden;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--default-black-clr);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+}

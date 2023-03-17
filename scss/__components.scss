@@ -1,0 +1,41 @@
+/** @format */
+
+// buttons
+
+.primary-btn {
+  color: var(--default-white-clr-200);
+  font-size: var(--fs-14);
+  background: url('/public/circle1.svg');
+  background-repeat: no-repeat;
+  background-position: 0 26px;
+  background-size: 7px;
+  padding: 20px 13px;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &::after {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff00;
+    left: -20px;
+    top: 6px;
+    transform: scale(0);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: left;
+  }
+  &:hover {
+    background: url('/public/angle-right.svg');
+    background-repeat: no-repeat;
+    background-position: 23px 26px;
+    background-size: 7px;
+    padding: 20px 13px 20px 60px;
+    &::after {
+      background-color: #ffffff0f;
+      transform: scale(1);
+      left: -1px;
+    }
+  }
+}
