@@ -644,6 +644,11 @@ section.sec-slide .slide .sec-item1 h3 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-transform: uppercase;
+  overflow: hidden;
+}
+section.sec-slide .slide .sec-item1 h3 span {
+  display: block;
+  transform: translate(0, 0);
 }
 section.sec-slide .slide .sec-item3 {
   padding-left: 160px;
@@ -658,6 +663,16 @@ section.sec-slide .slide .sec-item3 h3 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-transform: uppercase;
+  overflow: hidden;
+}
+section.sec-slide .slide .sec-item3 h3 span {
+  display: block;
+}
+section.sec-slide .slide .sec-item3 h3 span.from-top {
+  transform: translate(0, -150px);
+}
+section.sec-slide .slide .sec-item3 h3 span.from-bottom {
+  transform: translate(0, 150px);
 }
 section.sec-slide .slide .sec-item-text {
   position: absolute;
