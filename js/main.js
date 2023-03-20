@@ -1,6 +1,8 @@
+/** @format */
+
 window.onload = function () {
-  let body = document.querySelector("body");
-  body.classList.add("startanimate");
+  let body = document.querySelector('body');
+  body.classList.add('startanimate');
 
   //! add animation to this class. It is initializing the moment side got fully loaded //
 };

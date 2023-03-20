@@ -57,6 +57,10 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: var(--font-primary);
   font-size: var(--fs-16);
