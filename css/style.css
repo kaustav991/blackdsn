@@ -595,7 +595,7 @@ section.sec-slide {
 section.sec-slide .slide {
   display: flex;
   gap: 30px;
-  width: 400%;
+  width: 315vw;
   height: 100vh;
   flex-wrap: nowrap;
 }
