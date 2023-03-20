@@ -66,6 +66,25 @@ body {
   overflow-y: visible;
   position: relative;
   height: unset;
+  overflow: hidden;
+}
+body:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 999999;
+  background-color: rgb(44, 44, 44);
+  transition: all 0.3s ease-in-out;
+}
+body.startanimate {
+  overflow: auto;
+}
+body.startanimate:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 ul li {
@@ -297,20 +316,7 @@ section.hero-sec {
   align-items: center;
   gap: 1.6rem;
   padding-bottom: 300px;
-  animation: slideup 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   position: relative;
-}
-section.hero-sec::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(44, 44, 44);
-  left: 50%;
-  top: -800px;
-  animation: slideup2 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-  clip-path: ellipse(100% 81% at 50% 0%);
-  transform: translateX(-50%);
 }
 section.hero-sec .hero-bg {
   position: relative;
@@ -435,6 +441,22 @@ section.hero-sec .hero-content h5 {
   border-block: 1px solid rgba(255, 255, 255, 0.3019607843);
   margin-bottom: 10px;
   width: 93%;
+}
+
+.startanimate section.hero-sec {
+  animation: slideup 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.startanimate section.hero-sec::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(44, 44, 44);
+  left: 50%;
+  top: -800px;
+  animation: slideup2 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  clip-path: ellipse(100% 81% at 50% 0%);
+  transform: translateX(-50%);
 }
 
 section.about {
