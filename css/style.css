@@ -67,7 +67,13 @@ body {
   position: relative;
   height: unset;
 }
-
+body:after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+}
 ul li {
   list-style: none;
 }
