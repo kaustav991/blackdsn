@@ -18,21 +18,12 @@ html {
 body {
   font-family: var(--font-primary);
   font-size: var(--fs-16);
-  background-image: url("../public/body-bg.png");
+  background-image: url('../public/body-bg.png');
   background-color: var(--default-black-bg);
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
   height: unset;
-  &:after {
-    content: "";
-    background-color: black;
-    position: absolute;
-    inset: 0;
-    z-index: 9999;
-  }
-  &.startanimate {
-  }
 }
 
 ul {
