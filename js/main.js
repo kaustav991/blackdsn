@@ -7,6 +7,44 @@ window.onload = function () {
   //! add animation to this class. It is initializing the moment side got fully loaded //
 };
 
+const showAnim = gsap
+  .from("header", {
+    yPercent: -100,
+    paused: true,
+    duration: 0.2,
+    toggleClass: "nav-bg",
+  })
+  .progress(1);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: 99999,
+  onUpdate: (self) => {
+    self.direction === -1 ? showAnim.play() : showAnim.reverse();
+  },
+});
+
+// select the element you want to add/remove the class from
+const element = document.querySelector("header");
+
+// define the scroll position where you want to add/remove the class
+const scrollPosition = element.offsetHeight;
+
+// listen for the 'scroll' event on the window
+window.addEventListener("scroll", () => {
+  // get the current vertical scroll position
+  const currentPosition = window.pageYOffset;
+  //console.log(scrollPosition);
+  // check if the current position is greater than or equal to the defined scroll position
+  if (currentPosition >= scrollPosition) {
+    // add the class to the element
+    element.classList.add("navbg");
+  } else {
+    // remove the class from the element
+    element.classList.remove("navbg");
+  }
+});
+
 /** @format */
 // swiper-sliders
 var swiper = new Swiper('.feed-slide', {
