@@ -37,9 +37,24 @@ var swiper = new Swiper('.post-slider', {
 
 // for locomotive scroll
 
-var scroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true,
-});
+// var scroll = new LocomotiveScroll({
+//   el: document.querySelector('[data-scroll-container]'),
+//   smooth: true,
+// });
 
 // gsap styles
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray('.sec-item');
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.slide',
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => '+=' + document.querySelector('.slide').offsetWidth,
+  },
+});

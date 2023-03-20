@@ -416,6 +416,7 @@ section.about {
 section.advantages {
   padding-block: 60px;
   text-align: center;
+  // height: 100vh;
   h3 {
     letter-spacing: 3px;
     font-size: var(--fs-14);
@@ -496,10 +497,13 @@ section.advantages {
 }
 
 section.sec-slide {
+  padding-top: 90px;
   .slide {
     display: flex;
     gap: 30px;
-    width: 400vw;
+    width: 400%;
+    height: 100vh;
+    flex-wrap: nowrap;
     .sec-item {
       width: 500px;
       display: flex;
@@ -534,7 +538,7 @@ section.sec-slide {
       }
       &1 {
         padding-left: 100px;
-        width: 1150px;
+        width: 900px;
         background-color: transparent !important;
         h3 {
           -webkit-text-stroke-width: 0.5px;
@@ -547,7 +551,7 @@ section.sec-slide {
         }
       }
       &3 {
-        padding-left: 100px;
+        padding-left: 160px;
         width: 1450px;
         background-color: transparent !important;
         h3 {
@@ -617,8 +621,9 @@ section.sec-slide {
 
 section.help {
   position: relative;
-  margin-top: -600px;
+  margin-top: 100px;
   z-index: 3;
+  // height: 100vh;
   & > img {
     height: 600px;
     width: 100%;

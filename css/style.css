@@ -52,6 +52,9 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -60,6 +63,9 @@ body {
   background-image: url("../public/body-bg.png");
   background-color: var(--default-black-bg);
   overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  height: unset;
 }
 
 ul li {
@@ -583,10 +589,15 @@ section.advantages .grid-3 .adv-card:last-child(2) figure svg path:nth-child(4) 
   fill: #fff;
 }
 
+section.sec-slide {
+  padding-top: 90px;
+}
 section.sec-slide .slide {
   display: flex;
   gap: 30px;
-  width: 400vw;
+  width: 400%;
+  height: 100vh;
+  flex-wrap: nowrap;
 }
 section.sec-slide .slide .sec-item {
   width: 500px;
@@ -622,7 +633,7 @@ section.sec-slide .slide .sec-item:nth-of-type(even) {
 }
 section.sec-slide .slide .sec-item1 {
   padding-left: 100px;
-  width: 1150px;
+  width: 900px;
   background-color: transparent !important;
 }
 section.sec-slide .slide .sec-item1 h3 {
@@ -635,7 +646,7 @@ section.sec-slide .slide .sec-item1 h3 {
   text-transform: uppercase;
 }
 section.sec-slide .slide .sec-item3 {
-  padding-left: 100px;
+  padding-left: 160px;
   width: 1450px;
   background-color: transparent !important;
 }
@@ -700,7 +711,7 @@ section.sec-slide .slide .sec-item:hover > img {
 
 section.help {
   position: relative;
-  margin-top: -600px;
+  margin-top: 100px;
   z-index: 3;
 }
 section.help > img {

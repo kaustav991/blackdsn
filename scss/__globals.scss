@@ -10,6 +10,10 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  // overflow-scrolling: touch;
 }
 body {
   font-family: var(--font-primary);
@@ -17,6 +21,9 @@ body {
   background-image: url('../public/body-bg.png');
   background-color: var(--default-black-bg);
   overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  height: unset;
 }
 
 ul {
