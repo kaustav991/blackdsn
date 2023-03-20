@@ -160,12 +160,17 @@ img {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  padding-block: 20px;
-  z-index: 1;
+  padding: 22px 100px;
+  z-index: 2;
+}
+header.navbg {
+  background-color: #131313;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 header .logo-box a.logo img {
   width: 100px;
