@@ -172,6 +172,21 @@ section.hero-sec {
   align-items: center;
   gap: 1.6rem;
   padding-bottom: 300px;
+  animation: slideup 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+    left: 50%;
+    top: -800px;
+    animation: slideup2 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    clip-path: ellipse(100% 81% at 50% 0%);
+    transform: translateX(-50%);
+  }
+
   .hero-bg {
     position: relative;
     img {

@@ -297,6 +297,20 @@ section.hero-sec {
   align-items: center;
   gap: 1.6rem;
   padding-bottom: 300px;
+  animation: slideup 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+}
+section.hero-sec::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(44, 44, 44);
+  left: 50%;
+  top: -800px;
+  animation: slideup2 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  clip-path: ellipse(100% 81% at 50% 0%);
+  transform: translateX(-50%);
 }
 section.hero-sec .hero-bg {
   position: relative;
@@ -1353,6 +1367,22 @@ footer .copy p {
   100% {
     z-index: 100;
     transform: rotate(315deg);
+  }
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideup2 {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -800px;
   }
 }
 

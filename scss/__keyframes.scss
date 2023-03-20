@@ -33,3 +33,20 @@
     transform: rotate(315deg);
   }
 }
+
+@keyframes slideup {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideup2 {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -800px;
+  }
+}
