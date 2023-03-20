@@ -72,5 +72,68 @@ gsap.to(container, {
   },
 });
 
-ScrollTrigger.refresh();
+document.addEventListener("DOMContentLoaded", () => {
+  let controller = new ScrollMagic.Controller();
 
+  let t3 = gsap.timeline();
+  t3.to(
+    ".go-top",
+    2,
+    {
+      y: -150,
+      ease: Power3.easeInOut,
+    },
+    "-=2"
+  ).to(
+    ".go-bottom",
+    2,
+    {
+      y: 150,
+      ease: Power3.easeInOut,
+    },
+    "-=2"
+  );
+
+  let scene3 = new ScrollMagic.Scene({
+    triggerElement: ".sec-slide",
+    duration: "2000",
+    triggerHook: 0,
+    offset: "onLeave",
+  })
+    .setTween(t3)
+    //.setPin(".sec-slide")
+    .addTo(controller);
+
+  let controller2 = new ScrollMagic.Controller();
+
+  let t5 = gsap.timeline();
+  t5.to(
+    ".from-top",
+    2,
+    {
+      y: 0,
+      ease: Power3.easeInOut,
+    },
+    "-=2"
+  ).to(
+    ".from-bottom",
+    2,
+    {
+      y: 0,
+      ease: Power3.easeInOut,
+    },
+    "-=2"
+  );
+
+  let scene5 = new ScrollMagic.Scene({
+    triggerElement: ".sec-slide",
+    duration: "5000",
+    triggerHook: 0,
+    offset: "onLeave",
+  })
+    .setTween(t5)
+    //.setPin(".sec-slide")
+    .addTo(controller2);
+});
+
+ScrollTrigger.refresh();
