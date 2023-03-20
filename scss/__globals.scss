@@ -15,6 +15,9 @@ html {
   -webkit-overflow-scrolling: touch;
   // overflow-scrolling: touch;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   font-family: var(--font-primary);
   font-size: var(--fs-16);
@@ -24,6 +27,25 @@ body {
   overflow-y: visible;
   position: relative;
   height: unset;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 999999;
+    background-color: rgba(44, 44, 44, 1);
+    transition: all 0.3s ease-in-out;
+  }
+  &.startanimate {
+    overflow: auto;
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
 }
 
 ul {
