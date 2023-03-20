@@ -548,6 +548,11 @@ section.sec-slide {
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
           text-transform: uppercase;
+          overflow: hidden;
+          span {
+            display: block;
+            transform: translate(0, 0);
+          }
         }
       }
       &3 {
@@ -562,6 +567,17 @@ section.sec-slide {
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
           text-transform: uppercase;
+          overflow: hidden;
+          span {
+            display: block;
+            //transform: translate(0, -100px);
+            &.from-top {
+              transform: translate(0, -150px);
+            }
+            &.from-bottom {
+              transform: translate(0, 150px);
+            }
+          }
         }
       }
       &-text {
