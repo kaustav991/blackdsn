@@ -464,7 +464,7 @@ section.about .about-part p {
   margin-bottom: 20px;
 }
 section.about .about-part .process {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 section.about .about-part .process li .progress {
