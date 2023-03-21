@@ -14,17 +14,8 @@ header {
   top: 0;
   width: 100%;
   padding: 22px 100px;
-  z-index: 2;
-  //   header {
-  //   position: fixed;
-  //   left: 0;
-  //   right: 0;
-  //   z-index: 2;
-  //   padding: 22px 100px;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   transition: all 0.3s ease-in-out;
-  // }
+  z-index: 99999999;
+
   &.navbg {
     background-color: #131313;
     padding-top: 10px;
@@ -180,6 +171,9 @@ header {
       }
     }
   }
+}
+
+aside.menu {
 }
 section.hero-sec {
   display: grid;

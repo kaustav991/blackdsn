@@ -23,8 +23,8 @@
     <title>Vite App</title>
   </head>
 
-  <body data-scroll-container>
-    <header data-scroll-sticky>
+  <body>
+    <header>
       <div class="container">
         <div class="row align-center justify-between">
           <div class="logo-box">
@@ -33,7 +33,7 @@
             /></a>
           </div>
           <nav class="nav-box">
-            <a href="">
+            <a href="" data-menu>
               <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -56,6 +56,7 @@
         </div>
       </div>
     </header>
+
     <section data-scroll-section class="hero-sec">
       <div class="hero-bg">
         <img src="./public/home-bg.jpg" alt="" />
@@ -94,6 +95,9 @@
         <a href="#" class="primary-btn magnet" id="primary-btn">About Me</a>
       </div>
     </section>
+
+    <aside class="menu" data-menu-field>menu</aside>
+
     <section data-scroll-section class="about">
       <div class="container-inner">
         <div class="about-part">
