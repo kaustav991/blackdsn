@@ -208,6 +208,7 @@ section.hero-sec {
       transform: translateY(-50%);
       gap: 10px;
       min-height: 260px;
+      z-index: 999999;
       li {
         color: var(--default-white-clr);
         rotate: 90deg;

@@ -8,16 +8,16 @@ window.onload = function () {
 };
 
 const showAnim = gsap
-  .from("header", {
+  .from('header', {
     yPercent: -100,
     paused: true,
     duration: 0.2,
-    toggleClass: "nav-bg",
+    toggleClass: 'nav-bg',
   })
   .progress(1);
 
 ScrollTrigger.create({
-  start: "top top",
+  start: 'top top',
   end: 99999,
   onUpdate: (self) => {
     self.direction === -1 ? showAnim.play() : showAnim.reverse();
@@ -25,23 +25,23 @@ ScrollTrigger.create({
 });
 
 // select the element you want to add/remove the class from
-const element = document.querySelector("header");
+const element = document.querySelector('header');
 
 // define the scroll position where you want to add/remove the class
 const scrollPosition = element.offsetHeight;
 
 // listen for the 'scroll' event on the window
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   // get the current vertical scroll position
   const currentPosition = window.pageYOffset;
   //console.log(scrollPosition);
   // check if the current position is greater than or equal to the defined scroll position
   if (currentPosition >= scrollPosition) {
     // add the class to the element
-    element.classList.add("navbg");
+    element.classList.add('navbg');
   } else {
     // remove the class from the element
-    element.classList.remove("navbg");
+    element.classList.remove('navbg');
   }
 });
 
@@ -166,3 +166,87 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 ScrollTrigger.refresh();
+
+// magnetic cursor
+// function cursorMagnetic() {
+//   class Magnetic {
+//     constructor(el, options = {}) {
+//       this.el = document.querySelector(el);
+//       this.options = $.extend(
+//         true,
+//         {
+//           y: 0.2,
+//           x: 0.2,
+//           s: 0.2,
+//           rs: 0.7,
+//         },
+//         this.el.data('magnetic') || options,
+//       );
+
+//       this.y = 0;
+//       this.x = 0;
+//       this.width = 0;
+//       this.height = 0;
+
+//       if (this.el.data('magnetic-init')) return;
+//       this.el.data('magnetic-init', true);
+
+//       this.bind();
+//     }
+
+//     bind() {
+//       this.el.on('mouseenter', () => {
+//         this.y = this.el.offset().top - window.pageYOffset;
+//         this.x = this.el.offset().left - window.pageXOffset;
+//         this.width = this.el.outerWidth();
+//         this.height = this.el.outerHeight();
+//       });
+
+//       this.el.on('mousemove', (e) => {
+//         const y = (e.clientY - this.y - this.height / 2) * this.options.y;
+//         const x = (e.clientX - this.x - this.width / 2) * this.options.x;
+
+//         this.move(x, y, this.options.s);
+//       });
+
+//       this.el.on('mouseleave', (e) => {
+//         this.move(0, 0, this.options.rs);
+//       });
+//     }
+
+//     move(x, y, speed) {
+//       gsap.to(this.el, {
+//         y: y,
+//         x: x,
+//         force3D: true,
+//         overwrite: true,
+//         duration: speed,
+//       });
+//     }
+//   }
+
+//   // Init magnetic
+//   document.querySelectorAll('[data-magnetic]').forEach(function () {
+//     new Magnetic(this);
+//   });
+// }
+// setTimeout(function () {
+//   cursorMagnetic();
+// }, 10);
+
+const ele = document.querySelectorAll('.magnet');
+let mm = new MagnetMouse({
+  magnet: {
+    element: '.magnet',
+    distance: 1,
+    position: 'center',
+  },
+});
+
+mm.init();
+
+var kursorx = new kursor({
+  type: 1,
+  color: '#fff',
+  removeDefaultCursor: true,
+});

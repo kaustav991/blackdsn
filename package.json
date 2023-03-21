@@ -14,7 +14,9 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "kursor": "^0.1.6",
     "locomotive-scroll": "^4.1.4",
+    "magnet-mouse": "github:fluffy-factory/magnet-mouse",
     "sass": "^1.59.2",
     "swiper": "^9.1.0"
   }
